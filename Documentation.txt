@@ -1,0 +1,12 @@
+*CREATE A APPLICATION NAMED my-react-app
+    npx create-react-app my-react-app 
+
+*RUN CREATED APPLICATION
+    cd my-react-app
+    npm start
+
+*MODIFY THE REACT APPLICATION
+    myReactApp/src/App.js :
+        change the contents to display
+    index.js:
+        change the contents
