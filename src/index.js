@@ -15,6 +15,6 @@ const myelement = (
   </table>
 );
 
-const container = document.getElementById('root');
+const container = document.getElementById('MyRootDiv');
 const root = ReactDOM.createRoot(container);
 root.render(myelement);
