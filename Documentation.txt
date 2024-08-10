@@ -7,6 +7,6 @@
 
 *MODIFY THE REACT APPLICATION
     myReactApp/src/App.js :
-        change the contents to display
+        change the contents to display - b91d56663f7cf08914cd9b2b0ae73bb55c22cdf4
     index.js:
-        change the contents
+        change the contents - 
