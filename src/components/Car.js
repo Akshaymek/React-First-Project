@@ -1,5 +1,4 @@
-function Car() {
-    return <h2>This Message is from Car Component</h2>;
-  }
-  
-  export default Car;
+function Car(props) {
+  return <h2>I am a { props.brand }!</h2>;
+}
+export default Car;
