@@ -1,17 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Car from './components/Car';
 
-function Car() {
-  return <h2>I am a Car!</h2>;
-}
-
-function Garage() {
-  return (
-    <>
-      <h1>Who lives in my Garage?</h1>
-      <Car />
-    </>
-  );
-}
 const root = ReactDOM.createRoot(document.getElementById('MyRootDiv'));
-root.render(<Garage/>);
+root.render(<Car/>);
