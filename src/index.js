@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Car(props) {
-  return <h2>I am a {props.color} Car!</h2>;
+function Car() {
+  return <h2>I am a Car!</h2>;
 }
 
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my Garage?</h1>
+      <Car />
+    </>
+  );
+}
 const root = ReactDOM.createRoot(document.getElementById('MyRootDiv'));
-root.render(<Car color="Blue"/>);
+root.render(<Garage/>);
