@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Car from './components/Car';
 
-function Garage() {
-  const carName = "Ford";
+function Football() {
+  const shoot = () => {
+    alert("Great Shot!");
+  }
+
   return (
-    <>
-      <h1>Who lives in my garage?</h1>
-      <Car brand={ carName } />
-    </>
+    <button onClick={shoot}>Take the shot!</button>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('MyRootDiv'));
-root.render(<Garage />);
+root.render(<Football />);
