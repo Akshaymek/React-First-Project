@@ -5,5 +5,5 @@ function Car(props) {
   return <h2>I am a {props.color} Car!</h2>;
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car color="red"/>);
+const root = ReactDOM.createRoot(document.getElementById('MyRootDiv'));
+root.render(<Car color="Blue"/>);
