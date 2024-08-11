@@ -1,14 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const myElement = (
-  <>
-    <p>I am a paragraph.</p>
-    <p>I am a paragraph too.</p>
-    <button className='classbtn'>AKSHAY</button>
-  </>
-);
-
-const container = document.getElementById('MyRootDiv');
-const root = ReactDOM.createRoot(container);
-root.render(myElement);
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
+const root = ReactDOM.createRoot(document.getElementById('MyRootDiv'));
+root.render(<Car />);
