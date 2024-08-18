@@ -2,23 +2,39 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 function MyForm() {
-  const [name, setName] = useState("AKSHAY");
+  const [inputs, setInputs] = useState({});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
 
   const handleSubmit = (event) => {
-    event.preventDefault();// Handle the form submission via JavaScript
-    alert(`The name you entered was: ${name}`)
+    event.preventDefault();
+    const { username, age } = inputs; // Destructure inputs to get username and age
+    alert(`Username: ${username}, Age: ${age}`);
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <label>Enter your name:
-        <input 
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+      <input 
+        type="text" 
+        name="username" 
+        value={inputs.username || ""} 
+        onChange={handleChange}
+      />
       </label>
-      <input type="submit" />
+      <label>Enter your age:
+        <input 
+          type="number" 
+          name="age" 
+          value={inputs.age || ""} 
+          onChange={handleChange}
+        />
+        </label>
+        <input type="submit" />
     </form>
   )
 }
