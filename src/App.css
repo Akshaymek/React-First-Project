@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-h2{
-  color: black;
-  background-color: chartreuse;
+.bigblue {
+  background-color: DodgerBlue;
+  color: white;
 }

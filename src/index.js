@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
-
+import myStyle from './my-style.module.css';
 const Header = () => {
-  const myStyle = {
-    color: "white",
-    backgroundColor: "DodgerBlue",
-    padding: "10px",
-    fontFamily: "Sans-Serif"
+  const BlackYellow = {
+    color: "Black",
+    backgroundColor:"Yellow"
   };
   return (
     <>
-      <h1 style={myStyle}>INLINE CSS </h1>
-      <h2>CSS STYLESHEET : EXTERNAL TEXT</h2>
+      <h1 style={{backgroundColor:"green" , color:"white"}}>INLINE CSS </h1>
+      <h1 style={BlackYellow}>SAME FILE</h1>
+      <h1 className='bigblue'> APP STYLE</h1> {/*  FORM App.css*/}
+      <h1 className={myStyle.bigRed}>CSS MODULE STYLE </h1> {/*  FORM MODULE FILE*/}
     </>
   );
 }
