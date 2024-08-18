@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 function MyForm() {
-  const [name, setName] = useState("Akshay");//set textbox inital value as Akshay 
+  const [name, setName] = useState("Snidhe");//set textbox inital value as Snidhe 
 
   return (
     <form>
