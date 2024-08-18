@@ -1,24 +1,20 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
-import Contact from "./pages/Contact";
-import NoPage from "./pages/NoPage";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './App.css';
 
-export default function App() {
+const Header = () => {
+  const myStyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Sans-Serif"
+  };
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>   {/*renders the Layout component.*/}
-          <Route index element={<Home />} />    {/* does not have a path but has an index attribute. this route as the default route for the parent route, which is /. */}
-          <Route path="blogs" element={<Blogs />} /> {/* blogs path is combined with the parent and becomes /blogs. */}
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} /> {/* will act as a catch-all for any undefined URLs. This is great for a 404 error page. */}
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <h1 style={myStyle}>INLINE CSS </h1>
+      <h2>CSS STYLESHEET : EXTERNAL TEXT</h2>
+    </>
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(<Header />);
